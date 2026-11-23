@@ -22,6 +22,9 @@
 }
 body { margin: 0; background: var(--paper); color: var(--ink); font: 1rem/1.6 "Maven Pro", system-ui, sans-serif; }
 a { color: inherit; font-weight: 700; text-decoration: none; }
+a:hover { color: #ffd85b; }
+.hero a:not(.button):hover,
+.skip:hover { color: #67150d; }
 a:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
 img { display: block; max-width: 100%; }
 .wrap { width: min(100% - 2.5rem, 69rem); margin-inline: auto; }
@@ -52,7 +55,7 @@ h2 { font-size: clamp(2rem, 5vw, 3.5rem); letter-spacing: -.05em; margin-bottom:
 .role { font-weight: 700; font-size: clamp(1.25rem, 4vw, 1.9rem); margin-bottom: .7rem; }
 .intro { max-width: 29rem; font-size: 1.15rem; margin-bottom: 1.5rem; }
 .button { display: inline-flex; gap: .7rem; padding: .65rem 1rem; background: var(--ink); color: white; text-decoration: none; font-weight: 700; }
-.button:hover { filter: brightness(.9); }
+.button:hover { background: #4c301c; color: #fff; }
 .button:focus-visible { outline-color: var(--ink); }
 .stripes { height: .9rem; background: linear-gradient(90deg, var(--stripe-bronze) 20%, var(--stripe-blue) 20% 40%, var(--stripe-magenta) 40% 60%, var(--stripe-red) 60% 80%, var(--stripe-gold) 80%); }
 @property --stripe-edge-1 {
@@ -149,7 +152,6 @@ main:has(> #work) {
   border: 0;
   box-shadow: .45rem .45rem 0 var(--frame-accent);
 }
-#work a:hover,
 #work a:focus-visible { color: var(--yellow); }
 .project-image { width: 100%; height: auto; aspect-ratio: 8 / 5; object-fit: cover; object-position: top; border-bottom: 1px solid var(--line); }
 .card-body { padding: 1rem 0 1.35rem; }
@@ -163,6 +165,7 @@ main:has(> #work) {
   box-shadow: .6rem .6rem 0 var(--frame-accent);
 }
 .text-link, .project-copy li a { color: var(--yellow); }
+.text-link:hover, .project-copy li a:hover { color: #fff; }
 .about {
   background: #392b1c;
   color: var(--paper);
@@ -210,6 +213,7 @@ main:has(> #work) {
   color: var(--yellow);
   box-shadow: inset 0 0 0 1px currentColor;
 }
+.project-copy .button:hover { background: #ffe17a; color: var(--ink); }
 .project-copy .button:focus-visible { outline-color: var(--paper); }
 .project-copy h1 { font-size: clamp(2.6rem, 7vw, 5rem); }
 .project-copy h2 { font-size: 1.6rem; margin-top: 2rem; }
