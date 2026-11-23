@@ -167,9 +167,12 @@ main:has(> #work) {
 }
 .about::after {
   content: "";
+  margin-top: clamp(2.5rem, 6vw, 5rem);
+}
+.about::after,
+.bronze-divider {
   display: block;
   height: clamp(5rem, 13vw, 15rem);
-  margin-top: clamp(2.5rem, 6vw, 5rem);
   background:
     linear-gradient(to bottom,
       transparent 0 15%, #0b0906 15% 18%,
@@ -207,7 +210,6 @@ main:has(> #work) {
   border: 0;
   box-shadow: .45rem .45rem 0 var(--stripe-gold);
 }
-.project-copy .project-capture { aspect-ratio: auto; }
 @media (max-width: 40rem) {
   .top, .nav-links { gap: .65rem; }
   .hero-mark { display: none; }
