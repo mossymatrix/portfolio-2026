@@ -21,7 +21,7 @@
   html:has(.skip:focus) { scroll-behavior: auto; }
 }
 body { margin: 0; background: var(--paper); color: var(--ink); font: 1rem/1.6 "Maven Pro", system-ui, sans-serif; }
-a { color: inherit; text-underline-offset: .23em; }
+a { color: inherit; font-weight: 700; text-decoration: none; }
 a:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
 img { display: block; max-width: 100%; }
 .wrap { width: min(100% - 2.5rem, 69rem); margin-inline: auto; }
@@ -52,7 +52,7 @@ h2 { font-size: clamp(2rem, 5vw, 3.5rem); letter-spacing: -.05em; margin-bottom:
 .role { font-weight: 700; font-size: clamp(1.25rem, 4vw, 1.9rem); margin-bottom: .7rem; }
 .intro { max-width: 29rem; font-size: 1.15rem; margin-bottom: 1.5rem; }
 .button { display: inline-flex; gap: .7rem; padding: .65rem 1rem; background: var(--ink); color: white; text-decoration: none; font-weight: 700; }
-.button:hover { text-decoration: underline; }
+.button:hover { filter: brightness(.9); }
 .button:focus-visible { outline-color: var(--ink); }
 .stripes { height: .9rem; background: linear-gradient(90deg, var(--stripe-bronze) 20%, var(--stripe-blue) 20% 40%, var(--stripe-magenta) 40% 60%, var(--stripe-red) 60% 80%, var(--stripe-gold) 80%); }
 @property --stripe-edge-1 {
@@ -153,13 +153,16 @@ main:has(> #work) {
 #work a:focus-visible { color: var(--yellow); }
 .project-image { width: 100%; height: auto; aspect-ratio: 8 / 5; object-fit: cover; object-position: top; border-bottom: 1px solid var(--line); }
 .card-body { padding: 1rem 0 1.35rem; }
-.card-body h3 a,
-.card-body h4 a { text-decoration-thickness: .08em; }
 .card-body h3 { font-size: 1.55rem; }
 .card-body h3, .card-body h4 { margin-bottom: .65rem; }
 .card-body p:last-child { margin-bottom: 0; }
 .more-title { font-size: 1.55rem; margin: clamp(2.75rem, 6vw, 5rem) 0 1.3rem; }
-.text-link { font-weight: 700; }
+.project-image-link { display: block; }
+.project-image-link:hover .project-image,
+.project-image-link:focus-visible .project-image {
+  box-shadow: .6rem .6rem 0 var(--frame-accent);
+}
+.text-link, .project-copy li a { color: var(--yellow); }
 .about {
   background: #392b1c;
   color: var(--paper);
@@ -193,7 +196,6 @@ main:has(> #work) {
   background: #000;
   color: #fff;
 }
-.contact a + a { margin-inline-start: 1rem; }
 .project-page {
   background: var(--section-dark);
   color: var(--paper);
