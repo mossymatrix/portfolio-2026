@@ -145,9 +145,7 @@ main:has(> #work) {
 .more .card:nth-child(2) { --frame-accent: var(--stripe-blue); }
 .more .card:nth-child(3) { --frame-accent: var(--stripe-magenta); }
 .card .project-image {
-  background: #000;
-  padding: .375rem;
-  border: .25rem solid #000;
+  border: 0;
   box-shadow: .45rem .45rem 0 var(--frame-accent);
 }
 #work a:hover,
