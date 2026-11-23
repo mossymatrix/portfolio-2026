@@ -1,0 +1,409 @@
+@mixin font($font-family, $font-file) {
+  @font-face {
+    font-family: $font-family;
+    src: url($font-file + '.ttf') format('truetype');
+    font-display: block;
+  }
+}
+
+@include font('MavenPro', '../assets/fonts/MavenPro');
+@include font('Barcode', '../assets/fonts/Barcode');
+
+$lightGold: #a78c5f;
+$kodakBlue: #3B93CF;
+$kodakPurple: #C55099;
+$kodakRed: #F03637;
+$kodakMustard: #CFA100;
+$kodakBronze: #5B4C28;
+$kodakYellow: #F7C824;
+
+body {
+  background-color: $kodakYellow;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+.btn {
+  background-color: $kodakRed;
+  color: #FFF !important;
+}
+
+.btn:hover {
+  background-color: $kodakBlue;
+  color: #FFF;
+}
+
+.section-title {
+  font-family: 'MavenPro', sans-serif;
+  font-size: 3rem !important;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  color: $kodakBlue;
+}
+
+.navbar {
+  background-color: $kodakYellow;
+
+  .navbar-brand {
+    font-family: 'MavenPro', sans-serif;
+    font-size: 2rem;
+    letter-spacing: -0.05em;
+    color: $kodakRed;
+    text-transform: uppercase;
+
+    span {
+      color: $kodakBlue;
+      text-transform: lowercase;
+    }
+
+    span.dark {
+      color: #000;
+    }
+  }
+
+  .navbar-brand:hover {
+    color: $kodakBlue;
+  }
+
+  .navbar-brand:hover span:not(.dark) {
+    color: $kodakRed;
+  }
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+
+  .header-subtitle {
+    font-family: 'MavenPro', sans-serif;
+    font-size: 4rem;
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    color: $kodakBronze;
+  }
+
+  .sub-title-container {
+    background-color: #000;
+    padding: 1rem;
+  }
+
+  img {
+    max-width: 50vh;
+    min-width: 300px
+  }
+
+  .bar-container {
+    background-color: #000
+  }
+
+  hr {
+    left: 0px;
+    width:100%;
+    margin:0;
+    border-width: 24px;
+  }
+
+  #thread1 {
+    border-color: $kodakBronze;
+    -webkit-animation: barAnimation 4s;
+    -moz-animation:    barAnimation 4s;
+    -o-animation:      barAnimation 4s;
+    animation:         barAnimation 4s;
+    animation-delay: -2s;
+    border-width: 16px;
+  }
+
+  #thread2 {
+    border-color: $kodakBlue;
+    -webkit-animation: barAnimation 6s;
+    -moz-animation:    barAnimation 6s;
+    -o-animation:      barAnimation 6s;
+    animation:         barAnimation 6s;
+    animation-delay: -4s;
+  }
+
+  #thread3 {
+    border-color: $kodakPurple;
+    -webkit-animation: barAnimation 8s;
+    -moz-animation:    barAnimation 8s;
+    -o-animation:      barAnimation 8s;
+    animation:         barAnimation 8s;
+    animation-delay: -6s;
+  }
+
+  #thread4 {
+    border-color: $kodakRed;
+    -webkit-animation: barAnimation 10s;
+    -moz-animation:    barAnimation 10s;
+    -o-animation:      barAnimation 10s;
+    animation:         barAnimation 10s;
+    animation-delay: -8s;
+  }
+
+  #thread5 {
+    border-color: $kodakMustard;
+    -webkit-animation: barAnimation 12s;
+    -moz-animation:    barAnimation 12s;
+    -o-animation:      barAnimation 12s;
+    animation:         barAnimation 12s;
+    animation-delay: -10s;
+  }
+}
+
+@-webkit-keyframes barAnimation {
+  0%   { width: 100%; }
+  50% { width: 100%; }
+  80% { width: 0px;}
+  100%{ width:100%;}
+}
+
+@-moz-keyframes barAnimation {
+  0%   { width: 100%; }
+  50% { width: 100%; }
+  80% { width: 0px;}
+  100%{ width:100%;}
+}
+
+@-o-keyframes barAnimation {
+  0%   { width: 100%; }
+  50% { width: 100%; }
+  80% { width: 0px;}
+  100%{ width:100%;}
+}
+
+@keyframes barAnimation {
+  0%   { width: 100%; }
+  50% { width: 100%; }
+  80% { width: 0px;}
+  100%{ width:100%;}
+}
+
+#portfolio {
+  img {
+    filter: grayscale(1);
+  }
+}
+
+.portfolio-item {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  max-width: 530px;
+  margin: auto auto 1rem;
+
+  .caption {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(33, 37, 41, 0.2);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+
+    .caption-content {
+      color: #fff;
+      margin: auto 2rem 2rem;
+      opacity: 0;
+
+      h4 {
+        font-family: 'MavenPro', sans-serif;
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+#about {
+  padding-top: 0;
+  margin-top: -16px;
+
+  span {
+    color: $kodakBlue;
+    font-weight: bold;
+  }
+}
+
+#contact {
+  padding-top: 0;
+  margin-top: -16px;
+
+  img {
+    max-width: 100%;
+    border-radius: 13px;
+  }
+
+  input,
+  textarea {
+    background-color: #000;
+    color: #FFF;
+    border: none;
+  }
+}
+
+#project {
+  background-color: #000;
+  color: white;
+
+  a {
+    color: $kodakPurple;
+  }
+
+  a:hover {
+    color: $kodakMustard;
+    text-decoration: none;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  h4.section-title {
+    font-size: 1.5rem !important;
+  }
+}
+
+footer {
+  background-color: #000;
+  padding-top: 0 !important;
+  margin-top: -16px;
+
+  hr {
+    margin-top: 0;
+  }
+
+  #goldOne {
+    background: linear-gradient(to right, $kodakBronze 0%, $lightGold 33%, $kodakBronze 50%, $lightGold 83%, $kodakBronze 100%);
+    height: 24px;
+    margin-bottom: 4px;
+  }
+
+  #goldTwo {
+    background: linear-gradient(to right, $kodakBronze 0%, $lightGold 34%, $kodakBronze 51%, $lightGold 84%, $kodakBronze 100%);
+    height: 24px;
+    margin-bottom: 7px;
+  }
+
+  #goldThree {
+    background: linear-gradient(to right, $kodakBronze 0%, $lightGold 35%, $kodakBronze 52%, $lightGold 85%, $kodakBronze 100%);
+    height: 20px;
+    margin-bottom: 10px;
+  }
+
+  #goldFour {
+    background: linear-gradient(to right, $kodakBronze 0%, $lightGold 36%, $kodakBronze 53%, $lightGold 86%, $kodakBronze 100%);
+    height: 15px;
+    margin-bottom: 15px;
+  }
+
+  #goldFive {
+    background: linear-gradient(to right, $kodakBronze 0%, $lightGold 37%, $kodakBronze 54%, $lightGold 87%, $kodakBronze 100%);
+    height: 10px;
+    margin-bottom: 20px;
+  }
+
+  #goldSix {
+    background: linear-gradient(to right, $kodakBronze 0%, $lightGold 38%, $kodakBronze 55%, $lightGold 88%, $kodakBronze 100%);
+    height: 7px;
+    margin-bottom: 3rem;
+  }
+
+  .social-link {
+    background-color: $kodakRed !important;
+    color: #FFF !important;
+  }
+
+  .social-link:hover {
+    background-color: $kodakBlue !important;
+    color: #FFF !important;
+  }
+
+  .social-link svg {
+    margin-bottom: 1.5px;
+  }
+
+  .copy {
+    font-family: 'Barcode', cursive;
+    font-size: 2rem;
+    color: $kodakBronze;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .portfolio-item {
+    max-width: none;
+    margin: 0;
+
+    .caption {
+      transition: background-color 0.7s, -webkit-clip-path 0.25s ease-out;
+      transition: clip-path 0.25s ease-out, background-color 0.7s;
+      transition: clip-path 0.25s ease-out, background-color 0.7s, -webkit-clip-path 0.25s ease-out;
+      -webkit-clip-path: inset(0px);
+      clip-path: inset(0px);
+
+      .caption-content {
+        transition: opacity 1s;
+        margin-left: 5rem;
+        margin-right: 5rem;
+        margin-bottom: 5rem;
+      }
+    }
+
+    img {
+      transition: -webkit-clip-path 0.25s ease-out;
+      transition: clip-path 0.25s ease-out;
+      transition: clip-path 0.25s ease-out, -webkit-clip-path 0.25s ease-out;
+      -webkit-clip-path: inset(-1px);
+      clip-path: inset(-1px);
+    }
+  }
+
+  .portfolio-item:hover {
+    img {
+      -webkit-clip-path: inset(2rem);
+      clip-path: inset(2rem);
+    }
+
+    .caption {
+      background-color: $kodakRed;
+      -webkit-clip-path: inset(2rem);
+      clip-path: inset(2rem);
+    }
+
+    .caption-content {
+      opacity: 1;
+    }
+  }
+
+  #about,
+  #portfolio,
+  #contact {
+    .section-title {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  p,
+  .navbar .navbar-brand {
+    font-size: 1.333rem;
+  }
+
+  header {
+    img {
+      max-width: 80%;
+      min-width: auto;
+    }
+
+    .header-subtitle {
+      font-size: 3.2rem;
+    }
+  }
+}
