@@ -132,11 +132,6 @@ main:has(> #work) {
   background: #1c1916;
   color: var(--paper);
 }
-#work > h2,
-.more-title {
-  border-top: .25rem solid #000;
-  padding-top: .75rem;
-}
 .featured, .more { display: grid; gap: clamp(1.5rem, 4vw, 3rem); }
 .featured { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .more { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -153,8 +148,7 @@ main:has(> #work) {
   background: #000;
   padding: .375rem;
   border: .25rem solid #000;
-  border-right-color: var(--frame-accent);
-  border-bottom-color: var(--frame-accent);
+  box-shadow: .45rem .45rem 0 var(--frame-accent);
 }
 #work a:hover,
 #work a:focus-visible { color: var(--yellow); }
