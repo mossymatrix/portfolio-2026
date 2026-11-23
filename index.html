@@ -1,207 +1,78 @@
-<!DOCTYPE html>
-<html lang="en" prefix="og: https://ogp.me/ns#">
+<!doctype html>
+<html lang="en">
 <head>
-  <!-- ATF STYLES -->
-  <style type="text/css">
-
-  </style>
-  <!-- END ATF STYLES -->
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-669LTSY8MZ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-669LTSY8MZ');
-  </script>
-
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="David Hale's web development portfolio site." />
-  <title>David Hale - Web Developer</title>
-
-  <link rel="icon" media="(prefers-color-scheme: light)" href="assets/img/dev-icon-dark.png">
-  <link rel="icon" media="(prefers-color-scheme: dark)" href="assets/img/dev-icon-light.png">
-
-  <link rel="image_src" href="https://www.david-hale.dev/assets/img/thumbnail.PNG" />
-  <meta property="og:title" content="David Hale - Web Developer" name="title" />
-  <meta property="og:description" content="Portfolio site for David Hale. A web developer with an eclectic background excited by learning new technologies and building solid digital products." />
-  <meta property="og:type" content="website" name="type" />
-  <meta property="og:url" content="https://www.david-hale.dev/" />
-  <meta property="og:image" content="https://www.david-hale.dev/assets/img/thumbnail.PNG" name="image" />
-
-  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
-
-  <link href="css/bootstrap.min.css" rel="stylesheet" />
-  <link href="css/styles.css" rel="stylesheet" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="David Hale, web developer in Gresham, Oregon. Selected work in accessible websites, CMS templates, and content management.">
+  <meta property="og:title" content="David Hale | Web Developer">
+  <meta property="og:description" content="Selected work in web development, accessibility, and content management.">
+  <meta property="og:image" content="assets/img/thumbnail.png">
+  <title>David Hale | Web Developer</title>
+  <link rel="icon" href="assets/img/dev-icon-dark.png">
+  <link rel="stylesheet" href="css/portfolio.css">
 </head>
-
 <body>
-  <!-- Header-->
-  <header class="d-flex flex-column">
-    <div class="container d-flex flex-column align-items-center my-auto">
-      <img src="assets/img/logo.svg" alt="site logo">
-      <img class="mt-4" src="assets/img/logo-letters.svg" alt="site logo lettering">
-      <h1 class="d-none">David Hale</h1>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="hero">
+    <div class="wrap">
+      <nav class="top" aria-label="Main navigation">
+        <a class="brand" href="./"><img src="assets/img/logo.svg" alt="" width="36" height="36"> David Hale</a>
+        <div class="nav-links"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+      </nav>
+      <div class="hero-content">
+        <div>
+          <h1>David Hale</h1>
+          <p class="role">Web developer</p>
+          <p class="intro">I build accessible websites and help teams keep their content useful and up to date.</p>
+          <a class="button" href="#work">View projects <span aria-hidden="true">↓</span></a>
+        </div>
+        <img class="hero-mark" src="assets/img/logo.svg" alt="" width="220" height="220">
+      </div>
     </div>
-    <div class="sub-title-container text-center">
-      <h2 class="header-subtitle">web developer</h2>
-    </div>
-    <div class="d-block bar-container">
-      <hr id="thread1" class="mb-2">
-      <hr id="thread2" class="mb-2">
-      <hr id="thread3" class="mb-2">
-      <hr id="thread4" class="mb-2">
-      <hr id="thread5" class="mb-2">
-    </div>
-    <div class="overlay"></div>
+    <div class="stripes" aria-hidden="true"></div>
   </header>
-
-  <!-- Portfolio-->
-  <section class="content-section" id="portfolio">
-    <div class="container d-lg-flex flex-row-reverse">
-      <div class="text-center">
-        <h3 class="section-title mb-5">Projects</h3>
-      </div>
-      <div class="d-flex flex-wrap justify-content-between">
-        <div class="col-lg-6 mb-4">
-          <a class="portfolio-item" href="./pikes-peak.html">
-            <div class="caption">
-              <div class="caption-content">
-                <h4>Pikes Peak</h4>
-                <p class="mb-0">Full site component build with front-end filtering and search.</p>
-              </div>
-            </div>
-            <img class="img-fluid" src="assets/img/pikes-peak.PNG" alt="Pikes Peak image" />
-          </a>
-        </div>
-        <div class="col-lg-6 mb-4">
-          <a class="portfolio-item" href="./smartbow.html">
-            <div class="caption">
-              <div class="caption-content">
-                <h4>Smartbow</h4>
-                <p class="mb-0">App created for employee training and reference material.</p>
-              </div>
-            </div>
-            <img class="img-fluid" src="assets/img/smart-bow.PNG" alt="Smartbow image" />
-          </a>
-        </div>
-        <div class="col-lg-6 mb-4">
-          <a class="portfolio-item" href="./kelly-university.html">
-            <div class="caption">
-              <div class="caption-content">
-                <h4>Kelly University</h4>
-                <p class="mb-0">Mock college site built as example for in-house CMS.</p>
-              </div>
-            </div>
-            <img class="img-fluid" src="assets/img/kelly-university.PNG" alt="University site image" />
-          </a>
-        </div>
-        <div class="col-lg-6 mb-4">
-          <a class="portfolio-item" href="./dynamic-hearing.html">
-            <div class="caption">
-              <div class="caption-content">
-                <h4>Dynamic Hearing</h4>
-                <p class="mb-0">Simple one page site for hearing aid center.</p>
-              </div>
-            </div>
-            <img class="img-fluid" src="assets/img/dynamic-hearing.PNG" alt="University site image" />
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About  -->
-  <section class="content-section" id="about">
-    <div class="container d-lg-flex flex-row-reverse">
-        <div class="text-center">
-          <h3 class="section-title mb-5">About</h3>
-        </div>
-        <div class="col">
-          <p>
-            I am a <span>Web Developer</span> with a passion for learning new technologies and building high-quality digital products. Over the past five years, I have gained experience working on a variety of projects, both large and small, for Fortune 500 companies and small local businesses. My expertise includes building <span>HTML</span> sites using <span>CSS</span>, <span>JavaScript</span>, and a mobile-first approach, as well as creating CMS templates, parsing <span>JSON</span> data, consuming <span>APIs</span>, managing projects, coordinating with multinational teams, and improving site speed with <span>ATF</span>.
-            <br><br>
-            I have an eye for detail and always maintain the design and development standards required. I am proficient in multiple <span>CMS</span> frameworks, including WordPress, AEM, and Crownpeak. Also familiar with command line tools such as <span>NPM</span>. I am committed to continuous learning and improving my skills, currently focusing on <span>React</span> and other modern <span>JavaScript</span> libraries.
-            <br><br>
-            My goal is to always create sleek, intuitive, and user-friendly digital products that <span>Exceed</span> my clients' <span>Expectations</span>.
-          </p>
-        </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section class="content-section" id="contact">
-    <div class="container d-lg-flex flex-row-reverse">
-      <div class="text-center">
-        <h3 class="section-title mb-5">Contact</h3>
-      </div>
-      <div class="col-lg-8 col-xl-7">
-        <form id="contactForm" method="post" data-netlify="true" name="contactForm" action="./contact-success.html">
-
-          <div class="mb-3">
-            <input placeholder="Name" class="form-control" id="name" type="text" name="name" required/>
-            <label class="d-none" for="name">Name</label>
+  <main id="main">
+    <section class="wrap section" id="work">
+      <h2>Selected work</h2>
+      <div class="featured">
+        <article class="card">
+          <img class="project-image" src="assets/img/timberline.webp" alt="Timberline Hair Co logo" width="720" height="450">
+          <div class="card-body">
+            <h3><a href="timberline.html">Timberline Hair Co</a></h3>
+            <p>Designed and built the website and created the logo. After launch, I published policy and service updates and helped move online booking to Vagaro.</p>
           </div>
-
-          <div class="mb-3">
-            <input placeholder="Email" class="form-control" id="email" type="email" name="email" required/>
-            <label class="d-none" for="email">Email</label>
+        </article>
+        <article class="card">
+          <img class="project-image" src="assets/img/pikes-peak.png" alt="Pikes Peak Community College website prototype" width="720" height="450">
+          <div class="card-body">
+            <h3><a href="pikes-peak.html">Pikes Peak Community College</a></h3>
+            <p>Built the homepage and 11 additional templates for the college’s CMS, including degree search, filters, and pagination.</p>
+            <a class="text-link" href="https://phuzisham.gitlab.io/pikes-peak/degree-search.html">Try Degree Search <span aria-hidden="true">↗</span></a>
           </div>
-
-          <div class="mb-3">
-            <input placeholder="Phone" class="form-control" id="phone" type="text" name="phone" required/>
-            <label class="d-none" for="phone">Phone</label>
-          </div>
-
-          <div class="mb-3">
-            <textarea placeholder="Message" class="form-control" id="message" type="text" rows="8" name="message" required></textarea>
-            <label class="d-none" for="message">Message</label>
-          </div>
-
-          <button class="btn px-5" id="submitButton" type="submit">Send</button>
-        </form>
+        </article>
       </div>
-      <div class="col mt-3 mt-lg-0">
-        <img src="assets/img/profile-image.jpeg" alt="Profile image">
+      <h3 class="more-title">More projects</h3>
+      <div class="more">
+        <article class="card"><img class="project-image" src="assets/img/dynamic-hearing.png" alt="" width="720" height="450" loading="lazy"><div class="card-body"><h4><a href="dynamic-hearing.html">Dynamic Hearing</a></h4><p>A one-page website designed for older clients.</p></div></article>
+        <article class="card"><img class="project-image" src="assets/img/smart-bow.png" alt="" width="720" height="450" loading="lazy"><div class="card-body"><h4><a href="smartbow.html">Smartbow</a></h4><p>An employee training and reference app.</p></div></article>
+        <article class="card"><img class="project-image" src="assets/img/kelly-university.png" alt="" width="720" height="450" loading="lazy"><div class="card-body"><h4><a href="kelly-university.html">Kelly University</a></h4><p>A sample college site built for an in-house CMS.</p></div></article>
       </div>
-    </div>
-  </section>
-
-  <!-- Footer-->
-  <footer class="footer text-center">
-    <hr id="goldOne">
-    <hr id="goldTwo">
-    <hr id="goldThree">
-    <hr id="goldFour">
-    <hr id="goldFive">
-    <hr id="goldSix">
-    <div class="container">
-      <ul class="list-inline mb-3">
-        <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white mr-3" href="https://github.com/phuzisham" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white mr-3" href="https://www.linkedin.com/in/david-william-hale/" target="_blank">
-            <i class="fab fa-linkedin"></i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a class="social-link rounded-circle text-white" href="https://www.instagram.com/phuzisham/" target="_blank">
-            <i class="fab fa-instagram"></i>
-          </a>
-        </li>
-      </ul>
-      <p class="copy mb-0">David Hale 2023</p>
-    </div>
+    </section>
+    <section class="about section" id="about">
+      <div class="wrap about-layout">
+        <div>
+          <h2>About me</h2>
+          <p>I’m a web developer based in Gresham, Oregon. I’ve worked with Adobe Experience Manager, Crownpeak, and WordPress, and accessibility testing and website QA have been a regular part of my work.</p>
+          <p>I moved into public service as a TriMet rail operator because I wanted to work closer to the community. I’m interested in bringing that same purpose to websites people rely on.</p>
+        </div>
+        <img src="assets/img/profile-image.jpeg" alt="David Hale" width="200" height="200" loading="lazy">
+      </div>
+    </section>
+  </main>
+  <footer class="wrap section contact" id="contact">
+    <h2>Contact</h2>
+    <a class="text-link" href="mailto:david.hale7@gmail.com">david.hale7@gmail.com</a>
+    <a class="text-link" href="https://github.com/phuzisham">GitHub</a>
   </footer>
-
-  <!-- Bootstrap core JS-->
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
