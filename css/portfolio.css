@@ -5,6 +5,7 @@
 }
 :root {
   --ink: #231b12;
+  --section-dark: #211b13;
   --paper: #fbf5e8;
   --yellow: #f7c824;
   --line: #d4c39e;
@@ -160,7 +161,7 @@ main:has(> #work) {
 .more-title { font-size: 1.55rem; margin: clamp(2.75rem, 6vw, 5rem) 0 1.3rem; }
 .text-link { font-weight: 700; }
 .about {
-  background: #211b13;
+  background: var(--section-dark);
   color: var(--paper);
   padding-bottom: 0;
 }
@@ -190,10 +191,23 @@ main:has(> #work) {
   color: #fff;
 }
 .contact a + a { margin-inline-start: 1rem; }
+.project-page {
+  background: var(--section-dark);
+  color: var(--paper);
+}
+.project-page .hero { color: var(--ink); }
 .project-copy { max-width: 46rem; }
+.project-copy h1, .project-copy h2 { color: var(--yellow); }
+.project-copy .button { background: var(--yellow); color: var(--ink); }
+.project-copy .button:focus-visible { outline-color: var(--paper); }
 .project-copy h1 { font-size: clamp(2.6rem, 7vw, 5rem); }
 .project-copy h2 { font-size: 1.6rem; margin-top: 2rem; }
-.project-copy .project-image { margin-block: 1.5rem; }
+.project-copy .project-image {
+  margin-block: 1.5rem;
+  border: 0;
+  box-shadow: .45rem .45rem 0 var(--stripe-gold);
+}
+.project-copy .project-capture { aspect-ratio: auto; }
 @media (max-width: 40rem) {
   .top, .nav-links { gap: .65rem; }
   .hero-mark { display: none; }
