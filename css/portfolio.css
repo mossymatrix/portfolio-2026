@@ -229,3 +229,11 @@ main:has(> #work) {
   .about-layout { align-items: start; flex-direction: column; }
 }
 .brand img { object-fit: contain; }
+
+#work .text-link:is(:hover, :focus-visible),
+.contact .text-link:is(:hover, :focus-visible) { color: var(--stripe-blue); }
+.hero .nav-links a:is(:hover, :focus-visible) { color: #9e1b1e; }
+.hero-content .button:is(:hover, :focus-visible) {
+  background: var(--stripe-red);
+  color: var(--ink);
+}
