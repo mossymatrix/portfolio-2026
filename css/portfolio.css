@@ -163,7 +163,6 @@ main:has(> #work) {
 .about {
   background: #392b1c;
   color: var(--paper);
-  border-top: .25rem solid var(--stripe-gold);
   padding-top: clamp(3rem, 8vw, 6rem);
   padding-bottom: 0;
 }
@@ -186,7 +185,6 @@ main:has(> #work) {
     linear-gradient(105deg, #594a28, #ad9165 32%, #554623 51%, #a98c60 84%, #5d4d2b);
 }
 .about-layout { display: flex; align-items: center; justify-content: space-between; gap: clamp(2rem, 6vw, 5rem); }
-.about-layout h2 { color: var(--yellow); }
 .about-layout p { max-width: 42rem; }
 .about-layout img { width: clamp(13rem, 25vw, 17.5rem); height: auto; aspect-ratio: 1; flex-shrink: 0; object-fit: cover; box-shadow: .45rem .45rem 0 var(--yellow); }
 .contact#contact {
