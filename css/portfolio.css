@@ -43,8 +43,9 @@ img { display: block; max-width: 100%; }
   flex-direction: column;
 }
 .top, .nav-links, .brand { display: flex; align-items: center; gap: 1rem; }
-.top { min-height: 4.5rem; justify-content: space-between; border-bottom: 1px solid #231b1255; }
+.top { flex-wrap: wrap; min-height: 4.5rem; justify-content: space-between; border-bottom: 1px solid #231b1255; }
 .brand { gap: .5rem; font-weight: 700; text-decoration: none; }
+.nav-links { flex-wrap: wrap; }
 .nav-links a { min-height: 44px; display: inline-flex; align-items: center; }
 .hero-content { flex: 1; display: flex; align-items: center; justify-content: space-between; gap: 3rem; padding-block: clamp(3rem, 7vw, 6rem); }
 .hero-mark { width: clamp(8rem, 23vw, 14rem); height: auto; margin-inline-end: 4%; }
@@ -194,6 +195,7 @@ main:has(> #work) {
 .about-layout p { max-width: 42rem; }
 .about-layout img { width: clamp(13rem, 25vw, 17.5rem); height: auto; aspect-ratio: 1; flex-shrink: 0; object-fit: cover; box-shadow: .45rem .45rem 0 var(--yellow); }
 .contact#contact {
+  overflow-wrap: anywhere;
   width: 100%;
   padding-inline: max(1.25rem, calc((100% - 69rem) / 2));
   background: #000;
@@ -235,5 +237,5 @@ main:has(> #work) {
 .hero .nav-links a:is(:hover, :focus-visible) { color: #9e1b1e; }
 .hero-content .button:is(:hover, :focus-visible) {
   background: var(--stripe-red);
-  color: var(--ink);
+  color: #000;
 }
