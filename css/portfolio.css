@@ -45,17 +45,77 @@ h2 { font-size: clamp(2rem, 5vw, 3.5rem); letter-spacing: -.05em; margin-bottom:
 .button:hover { text-decoration: underline; }
 .button:focus-visible { outline-color: var(--ink); }
 .stripes { height: .9rem; background: linear-gradient(90deg, #5b4c28 20%, #3b93cf 20% 40%, #c55099 40% 60%, #f03637 60% 80%, #cfa100 80%); }
+@property --stripe-edge-1 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 20%;
+}
+@property --stripe-edge-2 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 40%;
+}
+@property --stripe-edge-3 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 60%;
+}
+@property --stripe-edge-4 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 80%;
+}
 .hero:has(.hero-content) .stripes {
   height: clamp(1.25rem, 3vw, 2.25rem);
   flex-shrink: 0;
+  background: linear-gradient(90deg,
+    #5b4c28 0 var(--stripe-edge-1, 20%),
+    #3b93cf var(--stripe-edge-1, 20%) var(--stripe-edge-2, 40%),
+    #c55099 var(--stripe-edge-2, 40%) var(--stripe-edge-3, 60%),
+    #f03637 var(--stripe-edge-3, 60%) var(--stripe-edge-4, 80%),
+    #cfa100 var(--stripe-edge-4, 80%) 100%);
 }
 @media (prefers-reduced-motion: no-preference) {
   .hero:has(.hero-content) .stripes {
-    animation: reveal-color-bars 850ms ease-out both;
+    animation: shift-color-bars 4.8s ease-in-out;
   }
-  @keyframes reveal-color-bars {
-    from { clip-path: inset(0 100% 0 0); }
-    to { clip-path: inset(0); }
+  @keyframes shift-color-bars {
+    0% {
+      --stripe-edge-1: 20%;
+      --stripe-edge-2: 40%;
+      --stripe-edge-3: 60%;
+      --stripe-edge-4: 80%;
+    }
+    20% {
+      --stripe-edge-1: 16%;
+      --stripe-edge-2: 43%;
+      --stripe-edge-3: 57%;
+      --stripe-edge-4: 85%;
+    }
+    42% {
+      --stripe-edge-1: 24%;
+      --stripe-edge-2: 37%;
+      --stripe-edge-3: 65%;
+      --stripe-edge-4: 77%;
+    }
+    64% {
+      --stripe-edge-1: 18%;
+      --stripe-edge-2: 46%;
+      --stripe-edge-3: 61%;
+      --stripe-edge-4: 83%;
+    }
+    82% {
+      --stripe-edge-1: 23%;
+      --stripe-edge-2: 39%;
+      --stripe-edge-3: 56%;
+      --stripe-edge-4: 76%;
+    }
+    100% {
+      --stripe-edge-1: 20%;
+      --stripe-edge-2: 40%;
+      --stripe-edge-3: 60%;
+      --stripe-edge-4: 80%;
+    }
   }
 }
 .section { padding-block: clamp(2.5rem, 6vw, 5rem); }
